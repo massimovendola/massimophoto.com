@@ -1,0 +1,93 @@
+<!--
+	Curious, aren't cha?
+	Don't use any media from my site without permission, I'll be checking. Feel free to use my code. :)
+	My first self-coded and designed site, let me know how I did!
+	
+	Much love <3,
+	- Massimo Vendola, massimovendola@gmail.com
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="look.css">
+	<title>Massimo Vendola Photography</title>
+	<link rel = "icon" href ="siteassets/favicon.png" type = "image/x-icon"> 
+</head>
+<body bgcolor="lightgray">
+<div class="main">	
+	<div class="sidebar">
+		<div class="namecard">
+			Massimo Vendola
+		</div>
+		<div class="namecardsub">
+			Photography, Videography, VFX
+		</div>
+	<ul>
+ 	 <li><a class="animated" href="home.html">Featured Content</a></li>
+     <li><a class="animated" href="city.html">City</a></li>
+ 	 <li><a class="animated" href="photoshoots.html">Photoshoots</a></li>
+ 	 <li><a class="animated" href="events.html">Events</a></li>
+ 	 <li><a class="realestate" href="realestate.html">Real Estate</a></li>
+ 	 <li><a class="animated" href="videoprojects.html">Video Projects</a></li>
+ 	 <li><a class="animated" href="renders.html">Renders/CGI</a></li>
+ 	 <li><a class="animated" href="about.html">About</a></li>
+ 	 <li><a class="animated" href="contact.html">Contact</a></li>
+	 </ul>
+	</div>
+
+	<div class="midcol">
+			<img class="myImages" id="myImg" src="media/realestate/building-1.JPG">
+	</div>
+
+	<div class="rightcol">
+			<img class="myImages" id="myImg" src="media/realestate/interior-1.jpg">
+			<img class="myImages" id="myImg" src="media/realestate/building-2.JPG">
+	</div>
+
+</div>
+
+<div class="footer">
+  <p>Copyright &copy; 2020 Massimo Vendola Photography. All rights reserved.</p>
+</div>
+
+<!-- DO NOT EDIT ANYTHING BELOW-->
+<!-- DO NOT EDIT ANYTHING BELOW-->
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  		<img class="modal-content" id="img01">
+  		<div id="caption"></div>
+</div>
+
+<script>
+	// create references to the modal...
+	var modal = document.getElementById('myModal');
+	// to all images -- note I'm using a class!
+	var images = document.getElementsByClassName('myImages');
+	// the image in the modal
+	var modalImg = document.getElementById("img01");
+	// and the caption in the modal
+	var captionText = document.getElementById("caption");
+
+	// Go through all of the images with our custom class
+	for (var i = 0; i < images.length; i++) {
+ 	 var img = images[i];
+ 	 // and attach our click listener for this image.
+ 	 img.onclick = function(evt) {
+ 	   console.log(evt);
+   		modal.style.display = "block";
+    	modalImg.src = this.src;
+    	captionText.innerHTML = this.alt;
+  	 }
+	}
+
+	var span = document.getElementsByClassName("close")[0];
+
+	span.onclick = function() {
+  	 modal.style.display = "none";
+	}
+</script>
+
+</body>
+</html>
