@@ -9,20 +9,14 @@ body{
 .animated 	{
   		text-align: center;
   		letter-spacing: 1px;
-  		transition: letter-spacing 3s ease;
-  		
+  		transition: letter-spacing 3s ease;		
 }
 
-.animated:hover {
-		transition: all 1s ease;
-  		letter-spacing: 3px;
-  		text-decoration: underline;
- 		
-	   }
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .animated:hover {
-    letter-spacing:  1px; /*Disable animation responsive*/
+    transition: all 1s ease;
+    letter-spacing: 3px;
+    text-decoration: underline;
   }
 }
 
@@ -72,7 +66,7 @@ body{
     margin: auto;
     width: 100%;
     padding-bottom: 2%;
-    overflow: hidden;
+    overflow: auto;
     margin-bottom: 2%;
   }
 }
@@ -88,12 +82,11 @@ body{
 
 @media only screen and (max-width: 1200px) {
   .namecard {
-    font-size: 15px;
     font-weight: bold;
     margin-top: 5%;
     margin-left: 0%;
     text-align: center;
-    font-size: 60px;
+    font-size: 80px;
   }
 }
 
@@ -103,14 +96,16 @@ body{
 	color: #f2f2f2;
 	font-style: italic;
 	font-family: Verdana;
-	font-size: 20px;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1200px) {
   .namecardsub {
     margin-left: 0%;
     text-align: center;
+    font-size: 12px;
     margin-bottom: 5%;
+    font-size: 24px;
   }
 }
 
@@ -123,33 +118,23 @@ body{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media only screen and (max-width: 1200px) {
-  .sidebar a, ul{
+  .sidebar a, ul, li{
     float: none;
-    margin: auto;
-    display: inline;
-    padding: 14px 14px;
-    text-align: center;
-    list-style: inside;
-    font-size: 11px;
-  }
-  li {
+    /*display: inline; /*important*/
+    font-size: 30px;
     float: center;
-    display: inline-block;
+    text-align: center;
+    padding: 4px 4px;
+
   }
-  ul {
-    width: 20%;
-    margin-left: 10%;
-  }
-  li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+  ul{
+    width: 100%;
+    display: block;
+    justify-content: center;
   }
 }
 
@@ -159,10 +144,19 @@ body{
   /*color: black;*/
 }
 
+
+
 /* Add a color to the active/current link */
 .sidebar a.active {
   background-color: #707070;
   color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sidebar a {
+    border-radius: 10px;
+    white-space: nowrap;
+  }
 }
 
 .midcol {
@@ -283,8 +277,12 @@ ul {
   text-align: right;
   font-style: italic;
   font-size: 12px;
-
 }
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    font-size: 6px;
+  }
 
 #myImg {
   border-radius: 20px;
