@@ -36,7 +36,41 @@ body{
   clear: both;
 }
 
-/* Add a black background color to the top navigation */
+.namecard {
+	margin-top: 50%;
+	margin-left: 5%;
+	color: #f2f2f2;
+	font-style: italic;
+	font-family: Verdana;
+	font-size: 25px;
+}
+
+.namecardsub {
+	margin-bottom: 20%;
+	margin-left: 5%;
+	color: #f2f2f2;
+	font-style: italic;
+	font-family: Verdana;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .namecard {
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 0%;
+    text-align: center;
+    font-size: 80px;
+  }
+  .namecardsub {
+    margin-left: 0%;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5%;
+    font-size: 24px;
+  }
+}
+
 /* Old sidebar
 .sidebar {
   float: left;
@@ -60,55 +94,6 @@ body{
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1200px) {
-  .sidebar {
-    position: static;
-    margin: auto;
-    width: 100%;
-    padding-bottom: 2%;
-    overflow: auto;
-    margin-bottom: 2%;
-  }
-}
-
-.namecard {
-	margin-top: 50%;
-	margin-left: 5%;
-	color: #f2f2f2;
-	font-style: italic;
-	font-family: Verdana;
-	font-size: 25px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .namecard {
-    font-weight: bold;
-    margin-top: 5%;
-    margin-left: 0%;
-    text-align: center;
-    font-size: 80px;
-  }
-}
-
-.namecardsub {
-	margin-bottom: 20%;
-	margin-left: 5%;
-	color: #f2f2f2;
-	font-style: italic;
-	font-family: Verdana;
-  font-size: 12px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .namecardsub {
-    margin-left: 0%;
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 5%;
-    font-size: 24px;
-  }
-}
-
 /* Style the links inside the navigation bar */
 .sidebar a, ul {
   float: right;
@@ -122,6 +107,14 @@ body{
 }
 
 @media only screen and (max-width: 1200px) {
+  .sidebar {
+    position: static;
+    margin: auto;
+    width: 100%;
+    padding-bottom: 2%;
+    overflow: auto;
+    margin-bottom: 2%;
+  }
   .sidebar a, ul, li{
     float: none;
     /*display: inline; /*important*/
@@ -136,6 +129,10 @@ body{
     display: block;
     justify-content: center;
   }
+  .sidebar a {
+    border-radius: 10px;
+    white-space: nowrap;
+  }
 }
 
 /* Change the color of links on hover */
@@ -144,19 +141,10 @@ body{
   /*color: black;*/
 }
 
-
-
 /* Add a color to the active/current link */
 .sidebar a.active {
   background-color: #707070;
   color: white;
-}
-
-@media only screen and (max-width: 1200px) {
-  .sidebar a {
-    border-radius: 10px;
-    white-space: nowrap;
-  }
 }
 
 .midcol {
@@ -167,14 +155,6 @@ body{
   margin-right: 1%;
 }
 
-@media only screen and (max-width: 1200px) {
-  .midcol {
-    margin-left: 5%;
-    width: 44%;
-    margin-right: 2%;
-  }
-}
-
 .rightcol {
   float: left;
   width: 34.5%;
@@ -182,6 +162,11 @@ body{
 }
 
 @media only screen and (max-width: 1200px) {
+  .midcol {
+    margin-left: 5%;
+    width: 44%;
+    margin-right: 2%;
+  }
   .rightcol {
     width: 44%;
   }
@@ -194,27 +179,12 @@ body{
   margin-left: 25%;
 }
 
-@media only screen and (max-width: 1200px) {
-  .col3-left {
-    margin-left: 5%;
-    width: 29.33%;;
-  }
-}
-
 .col3-mid {
   float: left;
   width: 23%;
   overflow: hidden;
   margin-left: .5%;
   margin-right: .5%;
-}
-
-@media only screen and (max-width: 1200px) {
-  .col3-mid {
-    width: 29.33%;;
-    margin-left: 1%;
-   margin-right: 1%;
-  }
 }
 
 .col3-right {
@@ -225,8 +195,73 @@ body{
 }
 
 @media only screen and (max-width: 1200px) {
+  .col3-left {
+    margin-left: 5%;
+    width: 29.33%;;
+  }
+  .col3-mid {
+    width: 29.33%;;
+    margin-left: 1%;
+   margin-right: 1%;
+  }
   .col3-right {
     width: 29.33%;;
+  }
+}
+
+.col2left{
+  float: left;
+  width: 23%;
+  overflow: hidden;
+  margin-left: 25%;
+  margin-right: 5%;
+}
+
+.col2right {
+  float: left;
+  width: 42%;
+  margin-right: 5%;
+  overflow-wrap: break-word;
+}
+
+.aboutcard {
+  font-size: 14px;
+  padding-top: 5%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .col2left {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    max-width:90vw;
+    max-height:90vw;
+    width: 30%;
+    padding-left: 10%;
+  }
+  .col2right {
+    margin-left: 15%;
+    width: 70%;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+  .aboutcard {
+    margin-top: 10%;
+    float: left;
+    font-size:auto;
+  }
+}
+
+.onecol{
+    margin-left: 25%;
+    padding-top: 10%;
+    align-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .onecol {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
@@ -234,7 +269,7 @@ img{
         max-width: 100%;
         max-height: 100%;
         display: block; /* remove extra space below image */
-    }
+}
 
 iframe, video, source{
   max-width: 100%;
@@ -278,11 +313,6 @@ ul {
   font-style: italic;
   font-size: 12px;
 }
-
-@media only screen and (max-width: 1200px) {
-  .footer {
-    font-size: 6px;
-  }
 
 #myImg {
   border-radius: 20px;
@@ -369,10 +399,4 @@ ul {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
 }
