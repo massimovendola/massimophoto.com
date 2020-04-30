@@ -252,6 +252,45 @@ body{
   }
 }
 
+.vidcont{
+  float: left;
+  width: 35%;
+  overflow: hidden;
+  margin-left: 25%;
+  margin-right: 5%;
+}
+
+.viddesc {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  overflow-wrap: break-word;
+  margin-bottom: auto;
+  height: 315px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .vidcont {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 40%;
+    margin-top: 3%;
+    align-content: center;
+  }
+  .viddesc {
+    padding: 0px;
+    width: 50%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: auto;
+  }
+}
+
 .onecol{
     margin-left: 25%;
     padding-top: 10%;
