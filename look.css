@@ -37,8 +37,9 @@ body{
 }
 
 .namecard {
-	margin-top: 50%;
+	margin-top: 40%;
 	margin-left: 5%;
+  margin-right: 5%;
 	color: #f2f2f2;
 	font-style: italic;
 	font-family: Verdana;
@@ -46,7 +47,7 @@ body{
 }
 
 .namecardsub {
-	margin-bottom: 20%;
+	margin-bottom: 15%;
 	margin-left: 5%;
 	color: #f2f2f2;
 	font-style: italic;
@@ -59,7 +60,9 @@ body{
     font-weight: bold;
     margin-top: 5%;
     margin-left: 0%;
+    margin-right: 0%;
     text-align: center;
+    justify-content: center;
     font-size: 80px;
   }
   .namecardsub {
